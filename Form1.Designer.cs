@@ -3,21 +3,23 @@
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TextBox txtLine1;
-        private System.Windows.Forms.TextBox txtLine2;
-        private System.Windows.Forms.TextBox txtLine3;
-        private System.Windows.Forms.TextBox txtLine4;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblVars;
-        private System.Windows.Forms.Button btnOledOn;
-        private System.Windows.Forms.Button btnOledOff;
-        private System.Windows.Forms.TrackBar trackBarBrightness;
-        private System.Windows.Forms.Label lblBrightness;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.ComboBox comboBoxCameraList;
+        private System.Windows.Forms.ComboBox comboBoxCamera1;
+        private System.Windows.Forms.ComboBox comboBoxCamera2;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.NumericUpDown numericFrequency;
+        private System.Windows.Forms.NumericUpDown numericExposure;
+        private System.Windows.Forms.TextBox txtOutputDirectory;
+        private System.Windows.Forms.Button btnBrowseOutput;
+        private System.Windows.Forms.Button btnStartCapture;
+        private System.Windows.Forms.Button btnStopCapture;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblFrequency;
+        private System.Windows.Forms.Label lblExposure;
+        private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Label lblCamera1;
+        private System.Windows.Forms.Label lblCamera2;
 
         protected override void Dispose(bool disposing)
         {
@@ -28,214 +30,223 @@
 
         private void InitializeComponent()
         {
-            txtLine1 = new TextBox();
-            txtLine2 = new TextBox();
-            txtLine3 = new TextBox();
-            txtLine4 = new TextBox();
-            btnSend = new Button();
-            lblStatus = new Label();
-            lblVars = new Label();
-            btnOledOn = new Button();
-            btnOledOff = new Button();
-            trackBarBrightness = new TrackBar();
-            lblBrightness = new Label();
             btnScan = new Button();
-            comboBoxCameraList = new ComboBox();
+            comboBoxCamera1 = new ComboBox();
+            comboBoxCamera2 = new ComboBox();
             btnConnect = new Button();
             btnDisconnect = new Button();
-            label1 = new Label();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)trackBarBrightness).BeginInit();
+            numericFrequency = new NumericUpDown();
+            numericExposure = new NumericUpDown();
+            txtOutputDirectory = new TextBox();
+            btnBrowseOutput = new Button();
+            btnStartCapture = new Button();
+            btnStopCapture = new Button();
+            lblStatus = new Label();
+            lblFrequency = new Label();
+            lblExposure = new Label();
+            lblOutput = new Label();
+            lblCamera1 = new Label();
+            lblCamera2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericFrequency).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericExposure).BeginInit();
             SuspendLayout();
-            // 
-            // txtLine1
-            // 
-            txtLine1.Location = new Point(33, 144);
-            txtLine1.Name = "txtLine1";
-            txtLine1.PlaceholderText = "第1行内容";
-            txtLine1.Size = new Size(351, 30);
-            txtLine1.TabIndex = 0;
-            // 
-            // txtLine2
-            // 
-            txtLine2.Location = new Point(33, 189);
-            txtLine2.Name = "txtLine2";
-            txtLine2.PlaceholderText = "第2行内容";
-            txtLine2.Size = new Size(351, 30);
-            txtLine2.TabIndex = 1;
-            // 
-            // txtLine3
-            // 
-            txtLine3.Location = new Point(33, 234);
-            txtLine3.Name = "txtLine3";
-            txtLine3.PlaceholderText = "第3行内容";
-            txtLine3.Size = new Size(351, 30);
-            txtLine3.TabIndex = 2;
-            // 
-            // txtLine4
-            // 
-            txtLine4.Location = new Point(33, 284);
-            txtLine4.Name = "txtLine4";
-            txtLine4.PlaceholderText = "第4行内容";
-            txtLine4.Size = new Size(351, 30);
-            txtLine4.TabIndex = 3;
-            // 
-            // btnSend
-            // 
-            btnSend.Enabled = false;
-            btnSend.Location = new Point(401, 129);
-            btnSend.Name = "btnSend";
-            btnSend.Size = new Size(185, 45);
-            btnSend.TabIndex = 4;
-            btnSend.Text = "发送到OLED";
-            btnSend.UseVisualStyleBackColor = true;
-            btnSend.Click += btnSend_Click;
-            // 
-            // lblStatus
-            // 
-            lblStatus.Location = new Point(401, 287);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(185, 36);
-            lblStatus.TabIndex = 5;
-            lblStatus.Text = "状态：";
-            // 
-            // lblVars
-            // 
-            lblVars.Location = new Point(30, 10);
-            lblVars.Name = "lblVars";
-            lblVars.Size = new Size(365, 30);
-            lblVars.TabIndex = 6;
-            lblVars.Text = "可用变量: {temp} 温度, {bin} Bin模式";
-            lblVars.Click += lblVars_Click;
-            // 
-            // btnOledOn
-            // 
-            btnOledOn.Enabled = false;
-            btnOledOn.Location = new Point(401, 40);
-            btnOledOn.Name = "btnOledOn";
-            btnOledOn.Size = new Size(91, 38);
-            btnOledOn.TabIndex = 7;
-            btnOledOn.Text = "OLED开";
-            btnOledOn.UseVisualStyleBackColor = true;
-            btnOledOn.Click += btnOledOn_Click;
-            // 
-            // btnOledOff
-            // 
-            btnOledOff.Enabled = false;
-            btnOledOff.Location = new Point(498, 40);
-            btnOledOff.Name = "btnOledOff";
-            btnOledOff.Size = new Size(88, 38);
-            btnOledOff.TabIndex = 8;
-            btnOledOff.Text = "OLED关";
-            btnOledOff.UseVisualStyleBackColor = true;
-            btnOledOff.Click += btnOledOff_Click;
-            // 
-            // trackBarBrightness
-            // 
-            trackBarBrightness.Enabled = false;
-            trackBarBrightness.Location = new Point(390, 214);
-            trackBarBrightness.Maximum = 255;
-            trackBarBrightness.Name = "trackBarBrightness";
-            trackBarBrightness.Size = new Size(196, 69);
-            trackBarBrightness.TabIndex = 9;
-            trackBarBrightness.Value = 128;
-            trackBarBrightness.Scroll += trackBarBrightness_Scroll;
-            // 
-            // lblBrightness
-            // 
-            lblBrightness.Location = new Point(401, 182);
-            lblBrightness.Name = "lblBrightness";
-            lblBrightness.Size = new Size(117, 37);
-            lblBrightness.TabIndex = 10;
-            lblBrightness.Text = "亮度: 128";
-            // 
+            //
             // btnScan
-            // 
+            //
             btnScan.Location = new Point(30, 79);
             btnScan.Name = "btnScan";
             btnScan.Size = new Size(136, 44);
-            btnScan.TabIndex = 11;
+            btnScan.TabIndex = 10;
             btnScan.Text = "扫描相机";
             btnScan.UseVisualStyleBackColor = true;
             btnScan.Click += btnScan_Click;
-            // 
-            // comboBoxCameraList
-            // 
-            comboBoxCameraList.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCameraList.FormattingEnabled = true;
-            comboBoxCameraList.Location = new Point(175, 86);
-            comboBoxCameraList.Name = "comboBoxCameraList";
-            comboBoxCameraList.Size = new Size(220, 32);
-            comboBoxCameraList.TabIndex = 12;
-            // 
+            //
+            // comboBoxCamera1
+            //
+            comboBoxCamera1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCamera1.FormattingEnabled = true;
+            comboBoxCamera1.Location = new Point(175, 40);
+            comboBoxCamera1.Name = "comboBoxCamera1";
+            comboBoxCamera1.Size = new Size(293, 32);
+            comboBoxCamera1.TabIndex = 0;
+            //
+            // comboBoxCamera2
+            //
+            comboBoxCamera2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCamera2.FormattingEnabled = true;
+            comboBoxCamera2.Location = new Point(175, 88);
+            comboBoxCamera2.Name = "comboBoxCamera2";
+            comboBoxCamera2.Size = new Size(293, 32);
+            comboBoxCamera2.TabIndex = 1;
+            //
             // btnConnect
-            // 
-            btnConnect.Location = new Point(401, 84);
+            //
+            btnConnect.Location = new Point(488, 40);
             btnConnect.Name = "btnConnect";
-            btnConnect.Size = new Size(91, 39);
-            btnConnect.TabIndex = 13;
-            btnConnect.Text = "连接";
+            btnConnect.Size = new Size(136, 39);
+            btnConnect.TabIndex = 2;
+            btnConnect.Text = "连接两台相机";
             btnConnect.UseVisualStyleBackColor = true;
             btnConnect.Click += btnConnect_Click;
-            // 
+            //
             // btnDisconnect
-            // 
+            //
             btnDisconnect.Enabled = false;
-            btnDisconnect.Location = new Point(498, 84);
+            btnDisconnect.Location = new Point(488, 88);
             btnDisconnect.Name = "btnDisconnect";
-            btnDisconnect.Size = new Size(88, 39);
-            btnDisconnect.TabIndex = 14;
-            btnDisconnect.Text = "断开";
+            btnDisconnect.Size = new Size(136, 39);
+            btnDisconnect.TabIndex = 3;
+            btnDisconnect.Text = "断开连接";
             btnDisconnect.UseVisualStyleBackColor = true;
             btnDisconnect.Click += btnDisconnect_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(30, 40);
-            label1.Name = "label1";
-            label1.Size = new Size(303, 24);
-            label1.TabIndex = 15;
-            label1.Text = "{gain} 增益, {time} 时间, {date} 日期";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(33, 331);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 24);
-            label3.TabIndex = 17;
-            // 
+            //
+            // numericFrequency
+            //
+            numericFrequency.DecimalPlaces = 2;
+            numericFrequency.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericFrequency.Location = new Point(175, 148);
+            numericFrequency.Maximum = new decimal(new int[] { 100, 0, 0, 0 });
+            numericFrequency.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericFrequency.Name = "numericFrequency";
+            numericFrequency.Size = new Size(120, 30);
+            numericFrequency.TabIndex = 4;
+            numericFrequency.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            //
+            // numericExposure
+            //
+            numericExposure.Location = new Point(175, 194);
+            numericExposure.Maximum = new decimal(new int[] { 600000, 0, 0, 0 });
+            numericExposure.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericExposure.Name = "numericExposure";
+            numericExposure.Size = new Size(120, 30);
+            numericExposure.TabIndex = 5;
+            numericExposure.Value = new decimal(new int[] { 1000, 0, 0, 0 });
+            //
+            // txtOutputDirectory
+            //
+            txtOutputDirectory.Location = new Point(175, 240);
+            txtOutputDirectory.Name = "txtOutputDirectory";
+            txtOutputDirectory.Size = new Size(309, 30);
+            txtOutputDirectory.TabIndex = 6;
+            //
+            // btnBrowseOutput
+            //
+            btnBrowseOutput.Location = new Point(488, 238);
+            btnBrowseOutput.Name = "btnBrowseOutput";
+            btnBrowseOutput.Size = new Size(136, 34);
+            btnBrowseOutput.TabIndex = 7;
+            btnBrowseOutput.Text = "选择目录";
+            btnBrowseOutput.UseVisualStyleBackColor = true;
+            btnBrowseOutput.Click += btnBrowseOutput_Click;
+            //
+            // btnStartCapture
+            //
+            btnStartCapture.Enabled = false;
+            btnStartCapture.Location = new Point(175, 286);
+            btnStartCapture.Name = "btnStartCapture";
+            btnStartCapture.Size = new Size(136, 44);
+            btnStartCapture.TabIndex = 8;
+            btnStartCapture.Text = "开始同步拍摄";
+            btnStartCapture.UseVisualStyleBackColor = true;
+            btnStartCapture.Click += btnStartCapture_Click;
+            //
+            // btnStopCapture
+            //
+            btnStopCapture.Enabled = false;
+            btnStopCapture.Location = new Point(317, 286);
+            btnStopCapture.Name = "btnStopCapture";
+            btnStopCapture.Size = new Size(136, 44);
+            btnStopCapture.TabIndex = 9;
+            btnStopCapture.Text = "停止拍摄";
+            btnStopCapture.UseVisualStyleBackColor = true;
+            btnStopCapture.Click += btnStopCapture_Click;
+            //
+            // lblStatus
+            //
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(30, 350);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(62, 24);
+            lblStatus.TabIndex = 18;
+            lblStatus.Text = "状态：";
+            //
+            // lblFrequency
+            //
+            lblFrequency.AutoSize = true;
+            lblFrequency.Location = new Point(30, 150);
+            lblFrequency.Name = "lblFrequency";
+            lblFrequency.Size = new Size(123, 24);
+            lblFrequency.TabIndex = 19;
+            lblFrequency.Text = "同步频率 (Hz)";
+            //
+            // lblExposure
+            //
+            lblExposure.AutoSize = true;
+            lblExposure.Location = new Point(30, 196);
+            lblExposure.Name = "lblExposure";
+            lblExposure.Size = new Size(139, 24);
+            lblExposure.TabIndex = 20;
+            lblExposure.Text = "曝光时间 (ms)";
+            //
+            // lblOutput
+            //
+            lblOutput.AutoSize = true;
+            lblOutput.Location = new Point(30, 243);
+            lblOutput.Name = "lblOutput";
+            lblOutput.Size = new Size(107, 24);
+            lblOutput.TabIndex = 21;
+            lblOutput.Text = "输出目录";
+            //
+            // lblCamera1
+            //
+            lblCamera1.AutoSize = true;
+            lblCamera1.Location = new Point(30, 43);
+            lblCamera1.Name = "lblCamera1";
+            lblCamera1.Size = new Size(86, 24);
+            lblCamera1.TabIndex = 22;
+            lblCamera1.Text = "相机1 ID";
+            //
+            // lblCamera2
+            //
+            lblCamera2.AutoSize = true;
+            lblCamera2.Location = new Point(30, 91);
+            lblCamera2.Name = "lblCamera2";
+            lblCamera2.Size = new Size(86, 24);
+            lblCamera2.TabIndex = 23;
+            lblCamera2.Text = "相机2 ID";
+            //
             // Form1
-            // 
-            ClientSize = new Size(639, 377);
-            Controls.Add(label3);
-            Controls.Add(label1);
+            //
+            AutoScaleDimensions = new SizeF(10F, 24F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(651, 400);
+            Controls.Add(lblCamera2);
+            Controls.Add(lblCamera1);
+            Controls.Add(lblOutput);
+            Controls.Add(lblExposure);
+            Controls.Add(lblFrequency);
+            Controls.Add(lblStatus);
+            Controls.Add(btnStopCapture);
+            Controls.Add(btnStartCapture);
+            Controls.Add(btnBrowseOutput);
+            Controls.Add(txtOutputDirectory);
+            Controls.Add(numericExposure);
+            Controls.Add(numericFrequency);
             Controls.Add(btnDisconnect);
             Controls.Add(btnConnect);
-            Controls.Add(comboBoxCameraList);
+            Controls.Add(comboBoxCamera2);
+            Controls.Add(comboBoxCamera1);
             Controls.Add(btnScan);
-            Controls.Add(lblBrightness);
-            Controls.Add(trackBarBrightness);
-            Controls.Add(btnOledOff);
-            Controls.Add(btnOledOn);
-            Controls.Add(lblVars);
-            Controls.Add(lblStatus);
-            Controls.Add(btnSend);
-            Controls.Add(txtLine4);
-            Controls.Add(txtLine3);
-            Controls.Add(txtLine2);
-            Controls.Add(txtLine1);
             Name = "Form1";
-            Text = "QHYCCD 695A OLED";
+            Text = "QHYCCD 双相机同步拍摄";
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)trackBarBrightness).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericFrequency).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericExposure).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private Label label1;
-        private Label label3;
+        private System.ComponentModel.IContainer components = null;
     }
 }
