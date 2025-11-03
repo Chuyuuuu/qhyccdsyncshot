@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anon\\source\\repos\\qhyccd_695A\\qhyccd_695A\\qhyccd_695A.csproj",
-      "projectName": "qhyccd_695A",
-      "projectPath": "C:\\Users\\Anon\\source\\repos\\qhyccd_695A\\qhyccd_695A\\qhyccd_695A.csproj",
+      "projectUniqueName": "C:\\Users\\Anon\\Downloads\\qhyccdsyncshot-main\\qhyccdsyncshot.csproj",
+      "projectName": "qhyccdsyncshot",
+      "projectPath": "C:\\Users\\Anon\\Downloads\\qhyccdsyncshot-main\\qhyccdsyncshot.csproj",
       "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anon\\source\\repos\\qhyccd_695A\\qhyccd_695A\\obj\\",
+      "outputPath": "C:\\Users\\Anon\\Downloads\\qhyccdsyncshot-main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

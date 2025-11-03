@@ -1,0 +1,16 @@
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\SdkDemoOled.Form1.resources
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.csproj.GenerateResource.cache
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.AssemblyInfoInputs.cache
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.AssemblyInfo.cs
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.csproj.CoreCompileInputs.cache
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\bin\Debug\net8.0-windows\qhyccdsyncshot.exe
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\bin\Debug\net8.0-windows\qhyccdsyncshot.deps.json
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\bin\Debug\net8.0-windows\qhyccdsyncshot.runtimeconfig.json
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\bin\Debug\net8.0-windows\qhyccdsyncshot.dll
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\bin\Debug\net8.0-windows\qhyccdsyncshot.pdb
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.dll
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\refint\qhyccdsyncshot.dll
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.pdb
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\qhyccdsyncshot.genruntimeconfig.cache
+C:\Users\Anon\Downloads\qhyccdsyncshot-main\obj\Debug\net8.0-windows\ref\qhyccdsyncshot.dll
