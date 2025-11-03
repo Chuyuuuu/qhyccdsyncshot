@@ -10,6 +10,7 @@
         private System.Windows.Forms.Button btnDisconnect;
         private System.Windows.Forms.NumericUpDown numericFrequency;
         private System.Windows.Forms.NumericUpDown numericExposure;
+        private System.Windows.Forms.NumericUpDown numericGain;
         private System.Windows.Forms.TextBox txtOutputDirectory;
         private System.Windows.Forms.Button btnBrowseOutput;
         private System.Windows.Forms.Button btnStartCapture;
@@ -17,6 +18,7 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblFrequency;
         private System.Windows.Forms.Label lblExposure;
+        private System.Windows.Forms.Label lblGain;
         private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.Label lblCamera1;
         private System.Windows.Forms.Label lblCamera2;
@@ -37,6 +39,7 @@
             btnDisconnect = new Button();
             numericFrequency = new NumericUpDown();
             numericExposure = new NumericUpDown();
+            numericGain = new NumericUpDown();
             txtOutputDirectory = new TextBox();
             btnBrowseOutput = new Button();
             btnStartCapture = new Button();
@@ -44,11 +47,13 @@
             lblStatus = new Label();
             lblFrequency = new Label();
             lblExposure = new Label();
+            lblGain = new Label();
             lblOutput = new Label();
             lblCamera1 = new Label();
             lblCamera2 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericFrequency).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericExposure).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericGain).BeginInit();
             SuspendLayout();
             //
             // btnScan
@@ -122,19 +127,29 @@
             numericExposure.TabIndex = 5;
             numericExposure.Value = new decimal(new int[] { 1000, 0, 0, 0 });
             //
+            // numericGain
+            //
+            numericGain.Location = new Point(175, 240);
+            numericGain.Maximum = new decimal(new int[] { 100, 0, 0, 0 });
+            numericGain.Name = "numericGain";
+            numericGain.Size = new Size(120, 30);
+            numericGain.TabIndex = 6;
+            numericGain.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            numericGain.ValueChanged += numericGain_ValueChanged;
+            //
             // txtOutputDirectory
             //
-            txtOutputDirectory.Location = new Point(175, 240);
+            txtOutputDirectory.Location = new Point(175, 286);
             txtOutputDirectory.Name = "txtOutputDirectory";
             txtOutputDirectory.Size = new Size(309, 30);
-            txtOutputDirectory.TabIndex = 6;
+            txtOutputDirectory.TabIndex = 7;
             //
             // btnBrowseOutput
             //
-            btnBrowseOutput.Location = new Point(488, 238);
+            btnBrowseOutput.Location = new Point(488, 284);
             btnBrowseOutput.Name = "btnBrowseOutput";
             btnBrowseOutput.Size = new Size(136, 34);
-            btnBrowseOutput.TabIndex = 7;
+            btnBrowseOutput.TabIndex = 8;
             btnBrowseOutput.Text = "选择目录";
             btnBrowseOutput.UseVisualStyleBackColor = true;
             btnBrowseOutput.Click += btnBrowseOutput_Click;
@@ -142,10 +157,10 @@
             // btnStartCapture
             //
             btnStartCapture.Enabled = false;
-            btnStartCapture.Location = new Point(175, 286);
+            btnStartCapture.Location = new Point(175, 332);
             btnStartCapture.Name = "btnStartCapture";
             btnStartCapture.Size = new Size(136, 44);
-            btnStartCapture.TabIndex = 8;
+            btnStartCapture.TabIndex = 9;
             btnStartCapture.Text = "开始同步拍摄";
             btnStartCapture.UseVisualStyleBackColor = true;
             btnStartCapture.Click += btnStartCapture_Click;
@@ -153,10 +168,10 @@
             // btnStopCapture
             //
             btnStopCapture.Enabled = false;
-            btnStopCapture.Location = new Point(317, 286);
+            btnStopCapture.Location = new Point(317, 332);
             btnStopCapture.Name = "btnStopCapture";
             btnStopCapture.Size = new Size(136, 44);
-            btnStopCapture.TabIndex = 9;
+            btnStopCapture.TabIndex = 10;
             btnStopCapture.Text = "停止拍摄";
             btnStopCapture.UseVisualStyleBackColor = true;
             btnStopCapture.Click += btnStopCapture_Click;
@@ -164,7 +179,7 @@
             // lblStatus
             //
             lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(30, 350);
+            lblStatus.Location = new Point(30, 396);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(62, 24);
             lblStatus.TabIndex = 18;
@@ -188,13 +203,22 @@
             lblExposure.TabIndex = 20;
             lblExposure.Text = "曝光时间 (ms)";
             //
+            // lblGain
+            //
+            lblGain.AutoSize = true;
+            lblGain.Location = new Point(30, 242);
+            lblGain.Name = "lblGain";
+            lblGain.Size = new Size(86, 24);
+            lblGain.TabIndex = 21;
+            lblGain.Text = "增益 (dB)";
+            //
             // lblOutput
             //
             lblOutput.AutoSize = true;
-            lblOutput.Location = new Point(30, 243);
+            lblOutput.Location = new Point(30, 289);
             lblOutput.Name = "lblOutput";
             lblOutput.Size = new Size(107, 24);
-            lblOutput.TabIndex = 21;
+            lblOutput.TabIndex = 22;
             lblOutput.Text = "输出目录";
             //
             // lblCamera1
@@ -203,7 +227,7 @@
             lblCamera1.Location = new Point(30, 43);
             lblCamera1.Name = "lblCamera1";
             lblCamera1.Size = new Size(86, 24);
-            lblCamera1.TabIndex = 22;
+            lblCamera1.TabIndex = 23;
             lblCamera1.Text = "相机1 ID";
             //
             // lblCamera2
@@ -212,17 +236,18 @@
             lblCamera2.Location = new Point(30, 91);
             lblCamera2.Name = "lblCamera2";
             lblCamera2.Size = new Size(86, 24);
-            lblCamera2.TabIndex = 23;
+            lblCamera2.TabIndex = 24;
             lblCamera2.Text = "相机2 ID";
             //
             // Form1
             //
             AutoScaleDimensions = new SizeF(10F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(651, 400);
+            ClientSize = new Size(651, 446);
             Controls.Add(lblCamera2);
             Controls.Add(lblCamera1);
             Controls.Add(lblOutput);
+            Controls.Add(lblGain);
             Controls.Add(lblExposure);
             Controls.Add(lblFrequency);
             Controls.Add(lblStatus);
@@ -230,6 +255,7 @@
             Controls.Add(btnStartCapture);
             Controls.Add(btnBrowseOutput);
             Controls.Add(txtOutputDirectory);
+            Controls.Add(numericGain);
             Controls.Add(numericExposure);
             Controls.Add(numericFrequency);
             Controls.Add(btnDisconnect);
@@ -243,6 +269,7 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numericFrequency).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericExposure).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericGain).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
