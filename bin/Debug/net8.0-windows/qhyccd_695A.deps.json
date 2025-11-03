@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "qhyccd_695A/1.0.0": {
+        "runtime": {
+          "qhyccd_695A.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "qhyccd_695A/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

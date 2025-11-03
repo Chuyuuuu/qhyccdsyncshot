@@ -1,0 +1,16 @@
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\SdkDemoOled.Form1.resources
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.csproj.GenerateResource.cache
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.AssemblyInfoInputs.cache
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.AssemblyInfo.cs
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.csproj.CoreCompileInputs.cache
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\bin\Debug\net8.0-windows\qhyccd_695A.exe
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\bin\Debug\net8.0-windows\qhyccd_695A.deps.json
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\bin\Debug\net8.0-windows\qhyccd_695A.runtimeconfig.json
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\bin\Debug\net8.0-windows\qhyccd_695A.dll
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\bin\Debug\net8.0-windows\qhyccd_695A.pdb
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.dll
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\refint\qhyccd_695A.dll
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.pdb
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\qhyccd_695A.genruntimeconfig.cache
+C:\Users\Anon\source\repos\qhyccd_695A\qhyccd_695A\obj\Debug\net8.0-windows\ref\qhyccd_695A.dll
