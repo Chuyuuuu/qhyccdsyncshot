@@ -316,6 +316,12 @@ namespace SdkDemoOled
 
             try
             {
+                string? outputDirectory = captureOutputDirectory;
+                if (string.IsNullOrEmpty(outputDirectory))
+                {
+                    return;
+                }
+
                 string timestampKey = timestampUtc.ToString("yyyyMMdd_HHmmss_fff");
                 CancellationToken token = captureCts?.Token ?? CancellationToken.None;
 
@@ -323,7 +329,7 @@ namespace SdkDemoOled
                 for (int i = 0; i < connectedCameras.Count; i++)
                 {
                     CameraSession session = connectedCameras[i];
-                    tasks[i] = Task.Run(() => CaptureSingleFrame(session, timestampUtc, timestampKey, token), token);
+                    tasks[i] = Task.Run(() => CaptureSingleFrame(session, timestampUtc, timestampKey, token, outputDirectory), token);
                 }
 
                 Task.WaitAll(tasks);
@@ -340,7 +346,7 @@ namespace SdkDemoOled
             }
         }
 
-        private void CaptureSingleFrame(CameraSession session, DateTime timestampUtc, string timestampKey, CancellationToken token)
+        private void CaptureSingleFrame(CameraSession session, DateTime timestampUtc, string timestampKey, CancellationToken token, string outputDirectory)
         {
             if (token.IsCancellationRequested)
             {
@@ -381,11 +387,11 @@ namespace SdkDemoOled
                 session.LastBpp = bpp;
                 session.LastChannels = channels;
 
-                SaveFits(session, timestampUtc, timestampKey, session.Buffer, width, height, bpp, channels);
+                SaveFits(session, timestampUtc, timestampKey, session.Buffer, width, height, bpp, channels, outputDirectory);
             }
         }
 
-        private void SaveFits(CameraSession session, DateTime timestampUtc, string timestampKey, byte[] buffer, uint width, uint height, uint bpp, uint channels)
+        private void SaveFits(CameraSession session, DateTime timestampUtc, string timestampKey, byte[] buffer, uint width, uint height, uint bpp, uint channels, string outputDirectory)
         {
             if (channels != 1)
             {
@@ -411,10 +417,9 @@ namespace SdkDemoOled
 
             int dataLength = (int)dataSize;
 
-            string directory = captureOutputDirectory ?? throw new InvalidOperationException("输出目录无效");
-            Directory.CreateDirectory(directory);
+            Directory.CreateDirectory(outputDirectory);
             string fileName = $"{timestampKey}_{MakeSafeFileName(session.Id)}.fits";
-            string filePath = Path.Combine(directory, fileName);
+            string filePath = Path.Combine(outputDirectory, fileName);
 
             using FileStream stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None);
             WriteFits(stream, buffer, (int)width, (int)height, bytesPerPixel, dataLength, timestampUtc);
